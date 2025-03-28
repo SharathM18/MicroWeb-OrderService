@@ -16,5 +16,5 @@ app.register_blueprint(addtocart_bp)
 
 
 if __name__ == "__main__":
-    port = os.environ.get("PORT", 10000)
-    app.run(port=5002, debug=True)
+    port = int(os.environ.get("PORT", 10001))
+    app.run(host="0.0.0.0", port=port)
